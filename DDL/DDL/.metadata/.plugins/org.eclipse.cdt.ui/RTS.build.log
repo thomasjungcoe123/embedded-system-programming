@@ -1,0 +1,45 @@
+18:03:24 **** Incremental Build of configuration Debug for project RTS ****
+make -r -j4 all 
+Building file: ../src/RTS.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c99 -DDEBUG -D__CODE_RED -DCORE_M3 -D__LPC17XX__ -D__REDLIB__ -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/RTS.d" -MT"src/RTS.o" -MT"src/RTS.d" -o "src/RTS.o" "../src/RTS.c"
+../src/RTS.c:20:18: error: expected identifier or '(' before 'volatile'
+ #define PCONP (*(volatile unsigned int *) 0x400FC0C4)  // Power Control for Peripherals register -- r allows turning off selected peripheral functions for the purpose of
+                  ^
+../src/RTS.c:28:2: note: in expansion of macro 'PCONP'
+  PCONP |= (1<<9); // PCONP reset
+  ^~~~~
+../src/RTS.c:20:43: error: expected ')' before numeric constant
+ #define PCONP (*(volatile unsigned int *) 0x400FC0C4)  // Power Control for Peripherals register -- r allows turning off selected peripheral functions for the purpose of
+                                           ^
+../src/RTS.c:28:2: note: in expansion of macro 'PCONP'
+  PCONP |= (1<<9); // PCONP reset
+  ^~~~~
+../src/RTS.c:20:18: error: expected identifier or '(' before 'volatile'
+ #define PCONP (*(volatile unsigned int *) 0x400FC0C4)  // Power Control for Peripherals register -- r allows turning off selected peripheral functions for the purpose of
+                  ^
+../src/RTS.c:29:2: note: in expansion of macro 'PCONP'
+  PCONP &= (1<<9);
+  ^~~~~
+../src/RTS.c:20:43: error: expected ')' before numeric constant
+ #define PCONP (*(volatile unsigned int *) 0x400FC0C4)  // Power Control for Peripherals register -- r allows turning off selected peripheral functions for the purpose of
+                                           ^
+../src/RTS.c:29:2: note: in expansion of macro 'PCONP'
+  PCONP &= (1<<9);
+  ^~~~~
+../src/RTS.c:20:18: error: expected identifier or '(' before 'volatile'
+ #define PCONP (*(volatile unsigned int *) 0x400FC0C4)  // Power Control for Peripherals register -- r allows turning off selected peripheral functions for the purpose of
+                  ^
+../src/RTS.c:31:2: note: in expansion of macro 'PCONP'
+  PCONP |= (1<<9); // The RTC power/clock control bit enable.
+  ^~~~~
+../src/RTS.c:20:43: error: expected ')' before numeric constant
+ #define PCONP (*(volatile unsigned int *) 0x400FC0C4)  // Power Control for Peripherals register -- r allows turning off selected peripheral functions for the purpose of
+                                           ^
+../src/RTS.c:31:2: note: in expansion of macro 'PCONP'
+  PCONP |= (1<<9); // The RTC power/clock control bit enable.
+  ^~~~~
+make: *** [src/RTS.o] Error 1
+
+18:03:24 Build Finished (took 270ms)
+

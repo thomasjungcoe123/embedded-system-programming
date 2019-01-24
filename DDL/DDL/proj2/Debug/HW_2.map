@@ -1,0 +1,480 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+                              ./src/cr_startup_lpc175x_6x.o (__main)
+
+Discarded input sections
+
+ .group         0x00000000        0xc ./src/HW_2.o
+ .group         0x00000000        0xc ./src/HW_2.o
+ .text          0x00000000        0x0 ./src/HW_2.o
+ .data          0x00000000        0x0 ./src/HW_2.o
+ .bss           0x00000000        0x0 ./src/HW_2.o
+ .group         0x00000000        0xc ./src/cr_startup_lpc175x_6x.o
+ .text          0x00000000        0x0 ./src/cr_startup_lpc175x_6x.o
+ .data          0x00000000        0x0 ./src/cr_startup_lpc175x_6x.o
+ .bss           0x00000000        0x0 ./src/cr_startup_lpc175x_6x.o
+ .debug_macro   0x00000000      0xa60 ./src/cr_startup_lpc175x_6x.o
+ .group         0x00000000        0xc ./src/crp.o
+ .group         0x00000000        0xc ./src/crp.o
+ .text          0x00000000        0x0 ./src/crp.o
+ .data          0x00000000        0x0 ./src/crp.o
+ .bss           0x00000000        0x0 ./src/crp.o
+ .debug_macro   0x00000000      0xa60 ./src/crp.o
+ .text          0x00000000        0x0 c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+ .data          0x00000000        0x0 c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+ .bss           0x00000000        0x0 c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MFlash512        0x00000000         0x00080000         xr
+RamLoc32         0x10000000         0x00008000         xrw
+RamAHB32         0x2007c000         0x00008000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./src/HW_2.o
+LOAD ./src/cr_startup_lpc175x_6x.o
+LOAD ./src/crp.o
+START GROUP
+LOAD c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a
+LOAD c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libcr_eabihelpers.a
+END GROUP
+                0x00000000                __base_MFlash512 = 0x0
+                0x00000000                __base_Flash = 0x0
+                0x00080000                __top_MFlash512 = 0x80000
+                0x00080000                __top_Flash = 0x80000
+                0x10000000                __base_RamLoc32 = 0x10000000
+                0x10000000                __base_RAM = 0x10000000
+                0x10008000                __top_RamLoc32 = 0x10008000
+                0x10008000                __top_RAM = 0x10008000
+                0x2007c000                __base_RamAHB32 = 0x2007c000
+                0x2007c000                __base_RAM2 = 0x2007c000
+                0x20084000                __top_RamAHB32 = 0x20084000
+                0x20084000                __top_RAM2 = 0x20084000
+
+.text           0x00000000     0x11f8
+ FILL mask 0xff
+                0x00000000                __vectors_start__ = ABSOLUTE (.)
+ *(.isr_vector)
+ .isr_vector    0x00000000       0xcc ./src/cr_startup_lpc175x_6x.o
+                0x00000000                g_pfnVectors
+                0x000000cc                . = ALIGN (0x4)
+                0x000000cc                __section_table_start = .
+                0x000000cc                __data_section_table = .
+                0x000000cc        0x4 LONG 0x11f8 LOADADDR (.data)
+                0x000000d0        0x4 LONG 0x10000000 ADDR (.data)
+                0x000000d4        0x4 LONG 0x0 SIZEOF (.data)
+                0x000000d8        0x4 LONG 0x11f8 LOADADDR (.data_RAM2)
+                0x000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
+                0x000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
+                0x000000e4                __data_section_table_end = .
+                0x000000e4                __bss_section_table = .
+                0x000000e4        0x4 LONG 0x10000000 ADDR (.bss)
+                0x000000e8        0x4 LONG 0x14 SIZEOF (.bss)
+                0x000000ec        0x4 LONG 0x2007c000 ADDR (.bss_RAM2)
+                0x000000f0        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
+                0x000000f4                __bss_section_table_end = .
+                0x000000f4                __section_table_end = .
+ *(.after_vectors*)
+ .after_vectors
+                0x000000f4      0x128 ./src/cr_startup_lpc175x_6x.o
+                0x000000f4                data_init
+                0x00000136                bss_init
+                0x0000016c                ResetISR
+                0x000001e0                NMI_Handler
+                0x000001e6                HardFault_Handler
+                0x000001ec                MemManage_Handler
+                0x000001f2                BusFault_Handler
+                0x000001f8                UsageFault_Handler
+                0x000001fe                SVC_Handler
+                0x00000204                DebugMon_Handler
+                0x0000020a                PendSV_Handler
+                0x00000210                SysTick_Handler
+                0x00000216                EINT3_IRQHandler
+                0x00000216                CANActivity_IRQHandler
+                0x00000216                TIMER3_IRQHandler
+                0x00000216                UART0_IRQHandler
+                0x00000216                UART1_IRQHandler
+                0x00000216                EINT2_IRQHandler
+                0x00000216                USBActivity_IRQHandler
+                0x00000216                IntDefaultHandler
+                0x00000216                PLL0_IRQHandler
+                0x00000216                I2C0_IRQHandler
+                0x00000216                I2C1_IRQHandler
+                0x00000216                SSP0_IRQHandler
+                0x00000216                I2S_IRQHandler
+                0x00000216                I2C2_IRQHandler
+                0x00000216                RTC_IRQHandler
+                0x00000216                TIMER0_IRQHandler
+                0x00000216                SPI_IRQHandler
+                0x00000216                RIT_IRQHandler
+                0x00000216                EINT1_IRQHandler
+                0x00000216                TIMER1_IRQHandler
+                0x00000216                UART2_IRQHandler
+                0x00000216                ADC_IRQHandler
+                0x00000216                SSP1_IRQHandler
+                0x00000216                USB_IRQHandler
+                0x00000216                BOD_IRQHandler
+                0x00000216                PLL1_IRQHandler
+                0x00000216                WDT_IRQHandler
+                0x00000216                PWM1_IRQHandler
+                0x00000216                QEI_IRQHandler
+                0x00000216                EINT0_IRQHandler
+                0x00000216                CAN_IRQHandler
+                0x00000216                DMA_IRQHandler
+                0x00000216                TIMER2_IRQHandler
+                0x00000216                UART3_IRQHandler
+                0x00000216                MCPWM_IRQHandler
+                0x00000216                ENET_IRQHandler
+                0x000002fc                . = 0x2fc
+ *fill*         0x0000021c       0xe0 ff
+                0x000002fc                PROVIDE (__CRP_WORD_START__, .)
+ *(.crp)
+ .crp           0x000002fc        0x4 ./src/crp.o
+                0x000002fc                CRP_WORD
+                0x00000300                PROVIDE (__CRP_WORD_END__, .)
+                0x00000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
+ *(.text*)
+ .text.main     0x00000300       0xec ./src/HW_2.o
+                0x00000300                main
+ .text.wait_ticks
+                0x000003ec       0x24 ./src/HW_2.o
+                0x000003ec                wait_ticks
+ .text.reset_game
+                0x00000410       0xd4 ./src/HW_2.o
+                0x00000410                reset_game
+ .text.p1swTopRight
+                0x000004e4       0x24 ./src/HW_2.o
+                0x000004e4                p1swTopRight
+ .text.p1swMidRight
+                0x00000508       0x24 ./src/HW_2.o
+                0x00000508                p1swMidRight
+ .text.p1swButtomRight
+                0x0000052c       0x24 ./src/HW_2.o
+                0x0000052c                p1swButtomRight
+ .text.p1swTopMid
+                0x00000550       0x24 ./src/HW_2.o
+                0x00000550                p1swTopMid
+ .text.p1swMidMid
+                0x00000574       0x24 ./src/HW_2.o
+                0x00000574                p1swMidMid
+ .text.p1swButtomMid
+                0x00000598       0x24 ./src/HW_2.o
+                0x00000598                p1swButtomMid
+ .text.p1swTopLeft
+                0x000005bc       0x24 ./src/HW_2.o
+                0x000005bc                p1swTopLeft
+ .text.p1swMiddleLeft
+                0x000005e0       0x24 ./src/HW_2.o
+                0x000005e0                p1swMiddleLeft
+ .text.p1swButtomLeft
+                0x00000604       0x24 ./src/HW_2.o
+                0x00000604                p1swButtomLeft
+ .text.p2swTopRight
+                0x00000628       0x24 ./src/HW_2.o
+                0x00000628                p2swTopRight
+ .text.p2swMidRight
+                0x0000064c       0x24 ./src/HW_2.o
+                0x0000064c                p2swMidRight
+ .text.p2swButtomRight
+                0x00000670       0x24 ./src/HW_2.o
+                0x00000670                p2swButtomRight
+ .text.p2swTopMid
+                0x00000694       0x24 ./src/HW_2.o
+                0x00000694                p2swTopMid
+ .text.p2swMidMid
+                0x000006b8       0x24 ./src/HW_2.o
+                0x000006b8                p2swMidMid
+ .text.p2swButtomMid
+                0x000006dc       0x24 ./src/HW_2.o
+                0x000006dc                p2swButtomMid
+ .text.p2swTopLeft
+                0x00000700       0x24 ./src/HW_2.o
+                0x00000700                p2swTopLeft
+ .text.p2swMiddleLeft
+                0x00000724       0x24 ./src/HW_2.o
+                0x00000724                p2swMiddleLeft
+ .text.p2swButtomLeft
+                0x00000748       0x24 ./src/HW_2.o
+                0x00000748                p2swButtomLeft
+ .text.isP1LEDTopRight
+                0x0000076c       0x30 ./src/HW_2.o
+                0x0000076c                isP1LEDTopRight
+ .text.isP1LEDMidRight
+                0x0000079c       0x30 ./src/HW_2.o
+                0x0000079c                isP1LEDMidRight
+ .text.isP1LEDButtomRight
+                0x000007cc       0x30 ./src/HW_2.o
+                0x000007cc                isP1LEDButtomRight
+ .text.isP1LEDTopMid
+                0x000007fc       0x30 ./src/HW_2.o
+                0x000007fc                isP1LEDTopMid
+ .text.isP1LEDMidMid
+                0x0000082c       0x30 ./src/HW_2.o
+                0x0000082c                isP1LEDMidMid
+ .text.isP1LEDButtomMid
+                0x0000085c       0x30 ./src/HW_2.o
+                0x0000085c                isP1LEDButtomMid
+ .text.isP1LEDTopLeft
+                0x0000088c       0x30 ./src/HW_2.o
+                0x0000088c                isP1LEDTopLeft
+ .text.isP1LEDMiddleLeft
+                0x000008bc       0x30 ./src/HW_2.o
+                0x000008bc                isP1LEDMiddleLeft
+ .text.isP1LEDButtomLeft
+                0x000008ec       0x30 ./src/HW_2.o
+                0x000008ec                isP1LEDButtomLeft
+ .text.isP2LEDTopRight
+                0x0000091c       0x30 ./src/HW_2.o
+                0x0000091c                isP2LEDTopRight
+ .text.isP2LEDMidRight
+                0x0000094c       0x30 ./src/HW_2.o
+                0x0000094c                isP2LEDMidRight
+ .text.isP2LEDButtomRight
+                0x0000097c       0x30 ./src/HW_2.o
+                0x0000097c                isP2LEDButtomRight
+ .text.isP2LEDTopMid
+                0x000009ac       0x30 ./src/HW_2.o
+                0x000009ac                isP2LEDTopMid
+ .text.isP2LEDMidMid
+                0x000009dc       0x30 ./src/HW_2.o
+                0x000009dc                isP2LEDMidMid
+ .text.isP2LEDButtomMid
+                0x00000a0c       0x30 ./src/HW_2.o
+                0x00000a0c                isP2LEDButtomMid
+ .text.isP2LEDTopLeft
+                0x00000a3c       0x30 ./src/HW_2.o
+                0x00000a3c                isP2LEDTopLeft
+ .text.isP2LEDMiddleLeft
+                0x00000a6c       0x30 ./src/HW_2.o
+                0x00000a6c                isP2LEDMiddleLeft
+ .text.isP2LEDButtomLeft
+                0x00000a9c       0x30 ./src/HW_2.o
+                0x00000a9c                isP2LEDButtomLeft
+ .text.p1_turn  0x00000acc      0x258 ./src/HW_2.o
+                0x00000acc                p1_turn
+ .text.p2_turn  0x00000d24      0x258 ./src/HW_2.o
+                0x00000d24                p2_turn
+ .text.p1_win   0x00000f7c      0x13c ./src/HW_2.o
+                0x00000f7c                p1_win
+ .text.p2_win   0x000010b8      0x13c ./src/HW_2.o
+                0x000010b8                p2_win
+ .text.__weak_main
+                0x000011f4        0x4 c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+                0x000011f4                __weak_main
+                0x000011f4                __main
+ *(.rodata .rodata.* .constdata .constdata.*)
+                0x000011f8                . = ALIGN (0x4)
+
+.glue_7         0x000011f8        0x0
+ .glue_7        0x000011f8        0x0 linker stubs
+
+.glue_7t        0x000011f8        0x0
+ .glue_7t       0x000011f8        0x0 linker stubs
+
+.vfp11_veneer   0x000011f8        0x0
+ .vfp11_veneer  0x000011f8        0x0 linker stubs
+
+.v4_bx          0x000011f8        0x0
+ .v4_bx         0x000011f8        0x0 linker stubs
+
+.iplt           0x000011f8        0x0
+ .iplt          0x000011f8        0x0 ./src/HW_2.o
+
+.rel.dyn        0x000011f8        0x0
+ .rel.iplt      0x000011f8        0x0 ./src/HW_2.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x000011f8                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x000011f8                __exidx_end = .
+                0x000011f8                _etext = .
+
+.data_RAM2      0x2007c000        0x0 load address 0x000011f8
+ FILL mask 0xff
+                [!provide]                PROVIDE (__start_data_RAM2, .)
+ *(.ramfunc.$RAM2)
+ *(.ramfunc.$RamAHB32)
+ *(.data.$RAM2*)
+ *(.data.$RamAHB32*)
+                0x2007c000                . = ALIGN (0x4)
+                [!provide]                PROVIDE (__end_data_RAM2, .)
+
+.uninit_RESERVED
+                0x10000000        0x0
+ *(.bss.$RESERVED*)
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _end_uninit_RESERVED = .
+
+.data           0x10000000        0x0 load address 0x000011f8
+ FILL mask 0xff
+                0x10000000                _data = .
+ *(vtable)
+ *(.ramfunc*)
+ *(.data*)
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _edata = .
+
+.igot.plt       0x10000000        0x0 load address 0x000011f8
+ .igot.plt      0x10000000        0x0 ./src/HW_2.o
+
+.bss_RAM2       0x2007c000        0x0
+                [!provide]                PROVIDE (__start_bss_RAM2, .)
+ *(.bss.$RAM2*)
+ *(.bss.$RamAHB32*)
+                0x2007c000                . = ALIGN ((. != 0x0)?0x4:0x1)
+                [!provide]                PROVIDE (__end_bss_RAM2, .)
+
+.bss            0x10000000       0x14
+                0x10000000                _bss = .
+ *(.bss*)
+ .bss.won       0x10000000        0x1 ./src/HW_2.o
+                0x10000000                won
+ .bss.p1LEDTopRight
+                0x10000001        0x1 ./src/HW_2.o
+                0x10000001                p1LEDTopRight
+ .bss.p1LEDMidRight
+                0x10000002        0x1 ./src/HW_2.o
+                0x10000002                p1LEDMidRight
+ .bss.p1LEDButtomRight
+                0x10000003        0x1 ./src/HW_2.o
+                0x10000003                p1LEDButtomRight
+ .bss.p1LEDTopMid
+                0x10000004        0x1 ./src/HW_2.o
+                0x10000004                p1LEDTopMid
+ .bss.p1LEDMidMid
+                0x10000005        0x1 ./src/HW_2.o
+                0x10000005                p1LEDMidMid
+ .bss.p1LEDButtomMid
+                0x10000006        0x1 ./src/HW_2.o
+                0x10000006                p1LEDButtomMid
+ .bss.p1LEDTopLeft
+                0x10000007        0x1 ./src/HW_2.o
+                0x10000007                p1LEDTopLeft
+ .bss.p1LEDMiddleLeft
+                0x10000008        0x1 ./src/HW_2.o
+                0x10000008                p1LEDMiddleLeft
+ .bss.p1LEDButtomLeft
+                0x10000009        0x1 ./src/HW_2.o
+                0x10000009                p1LEDButtomLeft
+ .bss.p2LEDTopRight
+                0x1000000a        0x1 ./src/HW_2.o
+                0x1000000a                p2LEDTopRight
+ .bss.p2LEDMidRight
+                0x1000000b        0x1 ./src/HW_2.o
+                0x1000000b                p2LEDMidRight
+ .bss.p2LEDButtomRight
+                0x1000000c        0x1 ./src/HW_2.o
+                0x1000000c                p2LEDButtomRight
+ .bss.p2LEDTopMid
+                0x1000000d        0x1 ./src/HW_2.o
+                0x1000000d                p2LEDTopMid
+ .bss.p2LEDMidMid
+                0x1000000e        0x1 ./src/HW_2.o
+                0x1000000e                p2LEDMidMid
+ .bss.p2LEDButtomMid
+                0x1000000f        0x1 ./src/HW_2.o
+                0x1000000f                p2LEDButtomMid
+ .bss.p2LEDTopLeft
+                0x10000010        0x1 ./src/HW_2.o
+                0x10000010                p2LEDTopLeft
+ .bss.p2LEDMiddleLeft
+                0x10000011        0x1 ./src/HW_2.o
+                0x10000011                p2LEDMiddleLeft
+ .bss.p2LEDButtomLeft
+                0x10000012        0x1 ./src/HW_2.o
+                0x10000012                p2LEDButtomLeft
+ *(COMMON)
+                0x10000014                . = ALIGN (0x4)
+ *fill*         0x10000013        0x1 
+                0x10000014                _ebss = .
+                [!provide]                PROVIDE (end, .)
+
+.noinit_RAM2    0x2007c000        0x0
+ *(.noinit.$RAM2*)
+ *(.noinit.$RamAHB32*)
+                0x2007c000                . = ALIGN (0x4)
+
+.noinit         0x10000014        0x0
+                0x10000014                _noinit = .
+ *(.noinit*)
+                0x10000014                . = ALIGN (0x4)
+                0x10000014                _end_noinit = .
+                [!provide]                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
+                0x10008000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
+                0xefff74f2                PROVIDE (__valid_user_code_checksum, (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
+                0x00000000                _image_start = LOADADDR (.text)
+                0x000011f8                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x000011f8                _image_size = (_image_end - _image_start)
+OUTPUT(HW_2.axf elf32-littlearm)
+
+.debug_info     0x00000000      0x83a
+ .debug_info    0x00000000      0x5a6 ./src/HW_2.o
+ .debug_info    0x000005a6      0x255 ./src/cr_startup_lpc175x_6x.o
+ .debug_info    0x000007fb       0x3f ./src/crp.o
+
+.debug_abbrev   0x00000000      0x294
+ .debug_abbrev  0x00000000      0x14a ./src/HW_2.o
+ .debug_abbrev  0x0000014a      0x114 ./src/cr_startup_lpc175x_6x.o
+ .debug_abbrev  0x0000025e       0x36 ./src/crp.o
+
+.debug_aranges  0x00000000      0x208
+ .debug_aranges
+                0x00000000      0x170 ./src/HW_2.o
+ .debug_aranges
+                0x00000170       0x80 ./src/cr_startup_lpc175x_6x.o
+ .debug_aranges
+                0x000001f0       0x18 ./src/crp.o
+
+.debug_ranges   0x00000000      0x1d0
+ .debug_ranges  0x00000000      0x160 ./src/HW_2.o
+ .debug_ranges  0x00000160       0x70 ./src/cr_startup_lpc175x_6x.o
+
+.debug_macro    0x00000000      0xb6d
+ .debug_macro   0x00000000       0x20 ./src/HW_2.o
+ .debug_macro   0x00000020      0xa60 ./src/HW_2.o
+ .debug_macro   0x00000a80       0x82 ./src/HW_2.o
+ .debug_macro   0x00000b02       0x1d ./src/cr_startup_lpc175x_6x.o
+ .debug_macro   0x00000b1f       0x1a ./src/crp.o
+ .debug_macro   0x00000b39       0x34 ./src/crp.o
+
+.debug_line     0x00000000      0x753
+ .debug_line    0x00000000      0x60c ./src/HW_2.o
+ .debug_line    0x0000060c       0xd2 ./src/cr_startup_lpc175x_6x.o
+ .debug_line    0x000006de       0x75 ./src/crp.o
+
+.debug_str      0x00000000     0x3769
+ .debug_str     0x00000000     0x34aa ./src/HW_2.o
+                               0x34bd (size before relaxing)
+ .debug_str     0x000034aa      0x1d6 ./src/cr_startup_lpc175x_6x.o
+                               0x2e85 (size before relaxing)
+ .debug_str     0x00003680       0xe9 ./src/crp.o
+                               0x2d92 (size before relaxing)
+
+.comment        0x00000000       0x7e
+ .comment       0x00000000       0x7e ./src/HW_2.o
+                                 0x7f (size before relaxing)
+ .comment       0x0000007e       0x7f ./src/cr_startup_lpc175x_6x.o
+ .comment       0x0000007e       0x7f ./src/crp.o
+ .comment       0x0000007e       0x7f c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+
+.ARM.attributes
+                0x00000000       0x33
+ .ARM.attributes
+                0x00000000       0x33 ./src/HW_2.o
+ .ARM.attributes
+                0x00000033       0x33 ./src/cr_startup_lpc175x_6x.o
+ .ARM.attributes
+                0x00000066       0x33 ./src/crp.o
+ .ARM.attributes
+                0x00000099       0x33 c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+
+.debug_frame    0x00000000      0x6dc
+ .debug_frame   0x00000000      0x56c ./src/HW_2.o
+ .debug_frame   0x0000056c      0x170 ./src/cr_startup_lpc175x_6x.o

@@ -1,0 +1,21 @@
+11:33:35 **** Incremental Build of configuration Debug for project Time ****
+make -r -j4 all 
+Building file: ../src/Time.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c99 -DDEBUG -D__CODE_RED -DCORE_M3 -D__LPC17XX__ -D__REDLIB__ -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Time.d" -MT"src/Time.o" -MT"src/Time.d" -o "src/Time.o" "../src/Time.c"
+Finished building: ../src/Time.c
+ 
+Building target: Time.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="Time.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Time_Debug.ld" -o "Time.axf"  ./src/Time.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o   
+Memory region         Used Size  Region Size  %age Used
+c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o): In function `__main':
+       MFlash512:         772 B       512 KB      0.15%
+        RamLoc32:          0 GB        32 KB      0.00%
+__weak__main.c:(.text.__weak_main+0x0): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+        RamAHB32:          0 GB        32 KB      0.00%
+make: *** [Time.axf] Error 1
+
+11:33:35 Build Finished (took 583ms)
+

@@ -1,0 +1,489 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+                              ./src/cr_startup_lpc175x_6x.o (__main)
+
+Discarded input sections
+
+ .group         0x00000000        0xc ./src/HW6.o
+ .group         0x00000000        0xc ./src/HW6.o
+ .group         0x00000000        0xc ./src/HW6.o
+ .group         0x00000000        0xc ./src/HW6.o
+ .text          0x00000000        0x0 ./src/HW6.o
+ .data          0x00000000        0x0 ./src/HW6.o
+ .bss           0x00000000        0x0 ./src/HW6.o
+ .rodata.addrExpanHour
+                0x00000000        0x4 ./src/HW6.o
+ .rodata.addrExpanMin
+                0x00000000        0x4 ./src/HW6.o
+ .rodata.addrExpanSec
+                0x00000000        0x4 ./src/HW6.o
+ .bss.result    0x00000000        0x4 ./src/HW6.o
+ .bss.swMIN     0x00000000        0x4 ./src/HW6.o
+ .bss.swHOUR    0x00000000        0x4 ./src/HW6.o
+ .bss.tempRTCSEC
+                0x00000000        0x4 ./src/HW6.o
+ .bss.tempRTCMIN
+                0x00000000        0x4 ./src/HW6.o
+ .bss.tempRTCHOUR
+                0x00000000        0x4 ./src/HW6.o
+ .text.highFreqD4
+                0x00000000       0x54 ./src/HW6.o
+ .text.I2Cread  0x00000000       0x4c ./src/HW6.o
+ .text.readMinSwitchI2C
+                0x00000000       0x42 ./src/HW6.o
+ .text.readHourSwitchI2C
+                0x00000000       0x42 ./src/HW6.o
+ .group         0x00000000        0xc ./src/cr_startup_lpc175x_6x.o
+ .text          0x00000000        0x0 ./src/cr_startup_lpc175x_6x.o
+ .data          0x00000000        0x0 ./src/cr_startup_lpc175x_6x.o
+ .bss           0x00000000        0x0 ./src/cr_startup_lpc175x_6x.o
+ .debug_macro   0x00000000      0xa60 ./src/cr_startup_lpc175x_6x.o
+ .group         0x00000000        0xc ./src/crp.o
+ .group         0x00000000        0xc ./src/crp.o
+ .text          0x00000000        0x0 ./src/crp.o
+ .data          0x00000000        0x0 ./src/crp.o
+ .bss           0x00000000        0x0 ./src/crp.o
+ .debug_macro   0x00000000      0xa60 ./src/crp.o
+ .text          0x00000000        0x0 c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+ .data          0x00000000        0x0 c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+ .bss           0x00000000        0x0 c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MFlash512        0x00000000         0x00080000         xr
+RamLoc32         0x10000000         0x00008000         xrw
+RamAHB32         0x2007c000         0x00008000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./src/HW6.o
+LOAD ./src/cr_startup_lpc175x_6x.o
+LOAD ./src/crp.o
+START GROUP
+LOAD c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a
+LOAD c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libcr_eabihelpers.a
+END GROUP
+                0x00000000                __base_MFlash512 = 0x0
+                0x00000000                __base_Flash = 0x0
+                0x00080000                __top_MFlash512 = 0x80000
+                0x00080000                __top_Flash = 0x80000
+                0x10000000                __base_RamLoc32 = 0x10000000
+                0x10000000                __base_RAM = 0x10000000
+                0x10008000                __top_RamLoc32 = 0x10008000
+                0x10008000                __top_RAM = 0x10008000
+                0x2007c000                __base_RamAHB32 = 0x2007c000
+                0x2007c000                __base_RAM2 = 0x2007c000
+                0x20084000                __top_RamAHB32 = 0x20084000
+                0x20084000                __top_RAM2 = 0x20084000
+
+.text           0x00000000     0x1c60
+ FILL mask 0xff
+                0x00000000                __vectors_start__ = ABSOLUTE (.)
+ *(.isr_vector)
+ .isr_vector    0x00000000       0xcc ./src/cr_startup_lpc175x_6x.o
+                0x00000000                g_pfnVectors
+                0x000000cc                . = ALIGN (0x4)
+                0x000000cc                __section_table_start = .
+                0x000000cc                __data_section_table = .
+                0x000000cc        0x4 LONG 0x1c60 LOADADDR (.data)
+                0x000000d0        0x4 LONG 0x10000000 ADDR (.data)
+                0x000000d4        0x4 LONG 0x8 SIZEOF (.data)
+                0x000000d8        0x4 LONG 0x1c60 LOADADDR (.data_RAM2)
+                0x000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
+                0x000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
+                0x000000e4                __data_section_table_end = .
+                0x000000e4                __bss_section_table = .
+                0x000000e4        0x4 LONG 0x10000008 ADDR (.bss)
+                0x000000e8        0x4 LONG 0x3c SIZEOF (.bss)
+                0x000000ec        0x4 LONG 0x2007c000 ADDR (.bss_RAM2)
+                0x000000f0        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
+                0x000000f4                __bss_section_table_end = .
+                0x000000f4                __section_table_end = .
+ *(.after_vectors*)
+ .after_vectors
+                0x000000f4      0x128 ./src/cr_startup_lpc175x_6x.o
+                0x000000f4                data_init
+                0x00000136                bss_init
+                0x0000016c                ResetISR
+                0x000001e0                NMI_Handler
+                0x000001e6                HardFault_Handler
+                0x000001ec                MemManage_Handler
+                0x000001f2                BusFault_Handler
+                0x000001f8                UsageFault_Handler
+                0x000001fe                SVC_Handler
+                0x00000204                DebugMon_Handler
+                0x0000020a                PendSV_Handler
+                0x00000210                SysTick_Handler
+                0x00000216                EINT3_IRQHandler
+                0x00000216                CANActivity_IRQHandler
+                0x00000216                TIMER3_IRQHandler
+                0x00000216                UART0_IRQHandler
+                0x00000216                UART1_IRQHandler
+                0x00000216                EINT2_IRQHandler
+                0x00000216                USBActivity_IRQHandler
+                0x00000216                IntDefaultHandler
+                0x00000216                PLL0_IRQHandler
+                0x00000216                I2C0_IRQHandler
+                0x00000216                I2C1_IRQHandler
+                0x00000216                SSP0_IRQHandler
+                0x00000216                I2S_IRQHandler
+                0x00000216                I2C2_IRQHandler
+                0x00000216                RTC_IRQHandler
+                0x00000216                TIMER0_IRQHandler
+                0x00000216                SPI_IRQHandler
+                0x00000216                RIT_IRQHandler
+                0x00000216                EINT1_IRQHandler
+                0x00000216                TIMER1_IRQHandler
+                0x00000216                UART2_IRQHandler
+                0x00000216                ADC_IRQHandler
+                0x00000216                SSP1_IRQHandler
+                0x00000216                USB_IRQHandler
+                0x00000216                BOD_IRQHandler
+                0x00000216                PLL1_IRQHandler
+                0x00000216                WDT_IRQHandler
+                0x00000216                PWM1_IRQHandler
+                0x00000216                QEI_IRQHandler
+                0x00000216                EINT0_IRQHandler
+                0x00000216                CAN_IRQHandler
+                0x00000216                DMA_IRQHandler
+                0x00000216                TIMER2_IRQHandler
+                0x00000216                UART3_IRQHandler
+                0x00000216                MCPWM_IRQHandler
+                0x00000216                ENET_IRQHandler
+                0x000002fc                . = 0x2fc
+ *fill*         0x0000021c       0xe0 ff
+                0x000002fc                PROVIDE (__CRP_WORD_START__, .)
+ *(.crp)
+ .crp           0x000002fc        0x4 ./src/crp.o
+                0x000002fc                CRP_WORD
+                0x00000300                PROVIDE (__CRP_WORD_END__, .)
+                0x00000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
+ *(.text*)
+ .text.main     0x00000300      0x3c8 ./src/HW6.o
+                0x00000300                main
+ .text.wait_ticks
+                0x000006c8       0x24 ./src/HW6.o
+                0x000006c8                wait_ticks
+ .text.doorbellPressed
+                0x000006ec       0x24 ./src/HW6.o
+                0x000006ec                doorbellPressed
+ .text.highFreqB3
+                0x00000710       0x54 ./src/HW6.o
+                0x00000710                highFreqB3
+ .text.highFreqE4
+                0x00000764       0x54 ./src/HW6.o
+                0x00000764                highFreqE4
+ .text.highFreqF4
+                0x000007b8       0x54 ./src/HW6.o
+                0x000007b8                highFreqF4
+ .text.highFreqG4
+                0x0000080c       0x54 ./src/HW6.o
+                0x0000080c                highFreqG4
+ .text.firstq   0x00000860       0x5c ./src/HW6.o
+                0x00000860                firstq
+ .text.secq     0x000008bc       0x5c ./src/HW6.o
+                0x000008bc                secq
+ .text.thirdq   0x00000918       0x5c ./src/HW6.o
+                0x00000918                thirdq
+ .text.last     0x00000974       0x5c ./src/HW6.o
+                0x00000974                last
+ .text.at15     0x000009d0       0x5c ./src/HW6.o
+                0x000009d0                at15
+ .text.at30     0x00000a2c       0x28 ./src/HW6.o
+                0x00000a2c                at30
+ .text.at45     0x00000a54       0x22 ./src/HW6.o
+                0x00000a54                at45
+ *fill*         0x00000a76        0x2 ff
+ .text.ding     0x00000a78       0x28 ./src/HW6.o
+                0x00000a78                ding
+ .text.soundDatDing
+                0x00000aa0      0x65c ./src/HW6.o
+                0x00000aa0                soundDatDing
+ .text.meHlody  0x000010fc       0xa6 ./src/HW6.o
+                0x000010fc                meHlody
+ *fill*         0x000011a2        0x2 ff
+ .text.initializeI2C
+                0x000011a4       0x5c ./src/HW6.o
+                0x000011a4                initializeI2C
+ .text.configOutput
+                0x00001200       0xbc ./src/HW6.o
+                0x00001200                configOutput
+ .text.I2Cstart
+                0x000012bc       0x3c ./src/HW6.o
+                0x000012bc                I2Cstart
+ .text.I2Cstop  0x000012f8       0x30 ./src/HW6.o
+                0x000012f8                I2Cstop
+ .text.I2Cwrite
+                0x00001328       0x5c ./src/HW6.o
+                0x00001328                I2Cwrite
+ .text.display  0x00001384       0x78 ./src/HW6.o
+                0x00001384                display
+ .text.writeHourLeft
+                0x000013fc       0x48 ./src/HW6.o
+                0x000013fc                writeHourLeft
+ .text.writeHourRight
+                0x00001444       0x54 ./src/HW6.o
+                0x00001444                writeHourRight
+ .text.writeMinLeft
+                0x00001498       0x48 ./src/HW6.o
+                0x00001498                writeMinLeft
+ .text.writeMinRight
+                0x000014e0       0x54 ./src/HW6.o
+                0x000014e0                writeMinRight
+ .text.writeSecLeft
+                0x00001534       0x48 ./src/HW6.o
+                0x00001534                writeSecLeft
+ .text.writeSecRight
+                0x0000157c       0x54 ./src/HW6.o
+                0x0000157c                writeSecRight
+ .text.startButtomPressed
+                0x000015d0       0x24 ./src/HW6.o
+                0x000015d0                startButtomPressed
+ .text.setButtomPressed
+                0x000015f4       0xc0 ./src/HW6.o
+                0x000015f4                setButtomPressed
+ .text.hourButtomPressed
+                0x000016b4       0x24 ./src/HW6.o
+                0x000016b4                hourButtomPressed
+ .text.minButtomPressed
+                0x000016d8       0x24 ./src/HW6.o
+                0x000016d8                minButtomPressed
+ .text.resetRTC
+                0x000016fc       0x2c ./src/HW6.o
+                0x000016fc                resetRTC
+ .text.resetSeconds
+                0x00001728       0x18 ./src/HW6.o
+                0x00001728                resetSeconds
+ .text.resetAlarm
+                0x00001740       0x2c ./src/HW6.o
+                0x00001740                resetAlarm
+ .text.initRTC  0x0000176c       0x44 ./src/HW6.o
+                0x0000176c                initRTC
+ .text.alarmbuttonPressed
+                0x000017b0       0xd0 ./src/HW6.o
+                0x000017b0                alarmbuttonPressed
+ .text.turnLEDOn
+                0x00001880       0x50 ./src/HW6.o
+                0x00001880                turnLEDOn
+ .text.displayAlarmTime
+                0x000018d0       0x78 ./src/HW6.o
+                0x000018d0                displayAlarmTime
+ .text.countDownPressed
+                0x00001948       0xdc ./src/HW6.o
+                0x00001948                countDownPressed
+ .text.countDownDisplay
+                0x00001a24      0x204 ./src/HW6.o
+                0x00001a24                countDownDisplay
+ .text.elapsedTimePressed
+                0x00001c28       0x34 ./src/HW6.o
+                0x00001c28                elapsedTimePressed
+ .text.__weak_main
+                0x00001c5c        0x4 c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+                0x00001c5c                __weak_main
+                0x00001c5c                __main
+ *(.rodata .rodata.* .constdata .constdata.*)
+                0x00001c60                . = ALIGN (0x4)
+
+.glue_7         0x00001c60        0x0
+ .glue_7        0x00001c60        0x0 linker stubs
+
+.glue_7t        0x00001c60        0x0
+ .glue_7t       0x00001c60        0x0 linker stubs
+
+.vfp11_veneer   0x00001c60        0x0
+ .vfp11_veneer  0x00001c60        0x0 linker stubs
+
+.v4_bx          0x00001c60        0x0
+ .v4_bx         0x00001c60        0x0 linker stubs
+
+.iplt           0x00001c60        0x0
+ .iplt          0x00001c60        0x0 ./src/HW6.o
+
+.rel.dyn        0x00001c60        0x0
+ .rel.iplt      0x00001c60        0x0 ./src/HW6.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00001c60                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00001c60                __exidx_end = .
+                0x00001c60                _etext = .
+
+.data_RAM2      0x2007c000        0x0 load address 0x00001c60
+ FILL mask 0xff
+                [!provide]                PROVIDE (__start_data_RAM2, .)
+ *(.ramfunc.$RAM2)
+ *(.ramfunc.$RamAHB32)
+ *(.data.$RAM2*)
+ *(.data.$RamAHB32*)
+                0x2007c000                . = ALIGN (0x4)
+                [!provide]                PROVIDE (__end_data_RAM2, .)
+
+.uninit_RESERVED
+                0x10000000        0x0
+ *(.bss.$RESERVED*)
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _end_uninit_RESERVED = .
+
+.data           0x10000000        0x8 load address 0x00001c60
+ FILL mask 0xff
+                0x10000000                _data = .
+ *(vtable)
+ *(.ramfunc*)
+ *(.data*)
+ .data.amp      0x10000000        0x4 ./src/HW6.o
+                0x10000000                amp
+ .data.dispRTCState
+                0x10000004        0x4 ./src/HW6.o
+                0x10000004                dispRTCState
+                0x10000008                . = ALIGN (0x4)
+                0x10000008                _edata = .
+
+.igot.plt       0x10000008        0x0 load address 0x00001c68
+ .igot.plt      0x10000008        0x0 ./src/HW6.o
+
+.bss_RAM2       0x2007c000        0x0
+                [!provide]                PROVIDE (__start_bss_RAM2, .)
+ *(.bss.$RAM2*)
+ *(.bss.$RamAHB32*)
+                0x2007c000                . = ALIGN ((. != 0x0)?0x4:0x1)
+                [!provide]                PROVIDE (__end_bss_RAM2, .)
+
+.bss            0x10000008       0x3c
+                0x10000008                _bss = .
+ *(.bss*)
+ .bss.alarmState
+                0x10000008        0x4 ./src/HW6.o
+                0x10000008                alarmState
+ .bss.countDownSEC
+                0x1000000c        0x4 ./src/HW6.o
+                0x1000000c                countDownSEC
+ .bss.countDownMIN
+                0x10000010        0x4 ./src/HW6.o
+                0x10000010                countDownMIN
+ .bss.countDownHOUR
+                0x10000014        0x4 ./src/HW6.o
+                0x10000014                countDownHOUR
+ .bss.countDownState
+                0x10000018        0x4 ./src/HW6.o
+                0x10000018                countDownState
+ .bss.countDownStateReal
+                0x1000001c        0x4 ./src/HW6.o
+                0x1000001c                countDownStateReal
+ .bss.dispCountDownState
+                0x10000020        0x4 ./src/HW6.o
+                0x10000020                dispCountDownState
+ .bss.valueHOUR
+                0x10000024        0x4 ./src/HW6.o
+                0x10000024                valueHOUR
+ .bss.valueMIN  0x10000028        0x4 ./src/HW6.o
+                0x10000028                valueMIN
+ .bss.valueSEC  0x1000002c        0x4 ./src/HW6.o
+                0x1000002c                valueSEC
+ .bss.sum       0x10000030        0x4 ./src/HW6.o
+                0x10000030                sum
+ .bss.timeTotal
+                0x10000034        0x4 ./src/HW6.o
+                0x10000034                timeTotal
+ .bss.countDownReset
+                0x10000038        0x4 ./src/HW6.o
+                0x10000038                countDownReset
+ .bss.value     0x1000003c        0x4 ./src/HW6.o
+                0x1000003c                value
+ .bss.checkRTCSEC
+                0x10000040        0x4 ./src/HW6.o
+                0x10000040                checkRTCSEC
+ *(COMMON)
+                0x10000044                . = ALIGN (0x4)
+                0x10000044                _ebss = .
+                [!provide]                PROVIDE (end, .)
+
+.noinit_RAM2    0x2007c000        0x0
+ *(.noinit.$RAM2*)
+ *(.noinit.$RamAHB32*)
+                0x2007c000                . = ALIGN (0x4)
+
+.noinit         0x10000044        0x0
+                0x10000044                _noinit = .
+ *(.noinit*)
+                0x10000044                . = ALIGN (0x4)
+                0x10000044                _end_noinit = .
+                [!provide]                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
+                0x10008000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
+                0xefff74f2                PROVIDE (__valid_user_code_checksum, (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
+                0x00000000                _image_start = LOADADDR (.text)
+                0x00001c68                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x00001c68                _image_size = (_image_end - _image_start)
+OUTPUT(HW6.axf elf32-littlearm)
+
+.debug_info     0x00000000      0xce4
+ .debug_info    0x00000000      0xa50 ./src/HW6.o
+ .debug_info    0x00000a50      0x255 ./src/cr_startup_lpc175x_6x.o
+ .debug_info    0x00000ca5       0x3f ./src/crp.o
+
+.debug_abbrev   0x00000000      0x360
+ .debug_abbrev  0x00000000      0x216 ./src/HW6.o
+ .debug_abbrev  0x00000216      0x114 ./src/cr_startup_lpc175x_6x.o
+ .debug_abbrev  0x0000032a       0x36 ./src/crp.o
+
+.debug_aranges  0x00000000      0x228
+ .debug_aranges
+                0x00000000      0x190 ./src/HW6.o
+ .debug_aranges
+                0x00000190       0x80 ./src/cr_startup_lpc175x_6x.o
+ .debug_aranges
+                0x00000210       0x18 ./src/crp.o
+
+.debug_ranges   0x00000000      0x1f0
+ .debug_ranges  0x00000000      0x180 ./src/HW6.o
+ .debug_ranges  0x00000180       0x70 ./src/cr_startup_lpc175x_6x.o
+
+.debug_macro    0x00000000      0xcdd
+ .debug_macro   0x00000000       0xbc ./src/HW6.o
+ .debug_macro   0x000000bc      0xa60 ./src/HW6.o
+ .debug_macro   0x00000b1c       0x82 ./src/HW6.o
+ .debug_macro   0x00000b9e       0x10 ./src/HW6.o
+ .debug_macro   0x00000bae       0xc4 ./src/HW6.o
+ .debug_macro   0x00000c72       0x1d ./src/cr_startup_lpc175x_6x.o
+ .debug_macro   0x00000c8f       0x1a ./src/crp.o
+ .debug_macro   0x00000ca9       0x34 ./src/crp.o
+
+.debug_line     0x00000000      0xa40
+ .debug_line    0x00000000      0x8f9 ./src/HW6.o
+ .debug_line    0x000008f9       0xd2 ./src/cr_startup_lpc175x_6x.o
+ .debug_line    0x000009cb       0x75 ./src/crp.o
+
+.debug_str      0x00000000     0x406f
+ .debug_str     0x00000000     0x3db0 ./src/HW6.o
+                               0x3de6 (size before relaxing)
+ .debug_str     0x00003db0      0x1d6 ./src/cr_startup_lpc175x_6x.o
+                               0x2e84 (size before relaxing)
+ .debug_str     0x00003f86       0xe9 ./src/crp.o
+                               0x2d91 (size before relaxing)
+
+.comment        0x00000000       0x7e
+ .comment       0x00000000       0x7e ./src/HW6.o
+                                 0x7f (size before relaxing)
+ .comment       0x0000007e       0x7f ./src/cr_startup_lpc175x_6x.o
+ .comment       0x0000007e       0x7f ./src/crp.o
+ .comment       0x0000007e       0x7f c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+
+.ARM.attributes
+                0x00000000       0x33
+ .ARM.attributes
+                0x00000000       0x33 ./src/HW6.o
+ .ARM.attributes
+                0x00000033       0x33 ./src/cr_startup_lpc175x_6x.o
+ .ARM.attributes
+                0x00000066       0x33 ./src/crp.o
+ .ARM.attributes
+                0x00000099       0x33 c:/nxp/mcuxpressoide_10.2.1_795/ide/tools/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libcr_c.a(__weak__main.o)
+
+.debug_frame    0x00000000      0x7b0
+ .debug_frame   0x00000000      0x640 ./src/HW6.o
+ .debug_frame   0x00000640      0x170 ./src/cr_startup_lpc175x_6x.o

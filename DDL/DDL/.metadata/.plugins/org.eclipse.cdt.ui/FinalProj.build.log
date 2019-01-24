@@ -1,0 +1,284 @@
+16:17:57 **** Build of configuration Debug for project FinalProj ****
+make -r -j4 all 
+Building file: ../src/FinalProj.c
+Building file: ../src/cr_startup_lpc175x_6x.c
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c90 -DDEBUG -D__CODE_RED -DCORE_M3 -D__LPC17XX__ -D__REDLIB__ -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/FinalProj.d" -MT"src/FinalProj.o" -MT"src/FinalProj.d" -o "src/FinalProj.o" "../src/FinalProj.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c90 -DDEBUG -D__CODE_RED -DCORE_M3 -D__LPC17XX__ -D__REDLIB__ -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=c90 -DDEBUG -D__CODE_RED -DCORE_M3 -D__LPC17XX__ -D__REDLIB__ -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc175x_6x.d" -MT"src/cr_startup_lpc175x_6x.o" -MT"src/cr_startup_lpc175x_6x.d" -o "src/cr_startup_lpc175x_6x.o" "../src/cr_startup_lpc175x_6x.c"
+../src/crp.c:1:1: error: expected identifier or '(' before '/' token
+ //*****************************************************************************
+ ^
+../src/crp.c:5:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/crp.c:30:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/crp.c:1:2: error: unterminated comment
+ //*****************************************************************************
+  ^
+../src/FinalProj.c:18:1: error: C++ style comments are not allowed in ISO C90
+ // TODO: insert other include files here
+ ^
+../src/FinalProj.c:18:1: error: (this will be reported only once per input file)
+../src/FinalProj.c:30:0: warning: "PCLKSEL0" redefined
+ #define PCLKSEL0 (*(volatile unsigned int *)  0x400FC1A8) // Peripheral Clock Selection register 0
+ 
+../src/FinalProj.c:26:0: note: this is the location of the previous definition
+ #define PCLKSEL0 (*(volatile unsigned int *) 0x400FC1A8) // Peripheral Clock Selection registers 0 --  controls the rate of the clock signal
+ 
+../src/FinalProj.c: In function 'main':
+../src/FinalProj.c:43:51: error: expected expression before '/' token
+ #define FIO ((struct GPFOstruct *)0x2009c000)    // FIO for output
+                                                   ^
+../src/FinalProj.c:64:2: note: in expansion of macro 'FIO'
+  FIO[2].FIODIR &= ~(1<<8);  // switch set up as input
+  ^~~
+../src/FinalProj.c:43:51: error: expected expression before '/' token
+ #define FIO ((struct GPFOstruct *)0x2009c000)    // FIO for output
+                                                   ^
+../src/FinalProj.c:65:2: note: in expansion of macro 'FIO'
+  FIO[0].FIODIR |= (1 << 25);  // LED set up as output
+  ^~~
+../src/FinalProj.c:20:59: error: expected expression before '/' token
+ #define PINSEL1 (*(volatile unsigned int *) 0x4002C004)  // Pin Function Select Register 1 --  controls the functions of the upper half of Port 0
+                                                           ^
+../src/FinalProj.c:69:2: note: in expansion of macro 'PINSEL1'
+  PINSEL1 |= (1<<21);  // GPIO Port 0.26 has been selected for AOUT with when function 10
+  ^~~~~~~
+../src/FinalProj.c:20:59: error: expected expression before '/' token
+ #define PINSEL1 (*(volatile unsigned int *) 0x4002C004)  // Pin Function Select Register 1 --  controls the functions of the upper half of Port 0
+                                                           ^
+../src/FinalProj.c:70:2: note: in expansion of macro 'PINSEL1'
+  PINSEL1 &= ~(1<<20); // audio set up as output
+  ^~~~~~~
+../src/cr_startup_lpc175x_6x.c:1:1: error: expected identifier or '(' before '/' token
+ //*****************************************************************************
+ ^
+make: *** [src/crp.o] Error 1
+../src/cr_startup_lpc175x_6x.c:5:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:30:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+make: *** Waiting for unfinished jobs....
+../src/cr_startup_lpc175x_6x.c:36:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/FinalProj.c:73:2: error: 'for' loop initial declarations are only allowed in C99 or C11 mode
+  for (int i = 0; i < 256; i++)
+  ^~~
+../src/FinalProj.c:73:2: note: use option -std=c99, -std=gnu99, -std=c11 or -std=gnu11 to compile your code
+../src/cr_startup_lpc175x_6x.c:40:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:50:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:55:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:61:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:67:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:80:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/FinalProj.c:21:57: error: expected expression before '/' token
+ #define PCONP (*(volatile unsigned int *) 0x400FC0C4)  // Power Control for Peripherals register -- r allows turning off selected peripheral functions for the purpose of
+                                                         ^
+../src/FinalProj.c:79:2: note: in expansion of macro 'PCONP'
+  PCONP|=(1<<12);
+  ^~~~~
+../src/cr_startup_lpc175x_6x.c:87:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:128:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:134:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:139:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/FinalProj.c:23:57: error: expected expression before '/' token
+ #define AD0CR (*(volatile unsigned int *) 0x40034000)  // A/D Control Register
+                                                         ^
+../src/FinalProj.c:80:2: note: in expansion of macro 'AD0CR'
+  AD0CR=0;
+  ^~~~~
+../src/cr_startup_lpc175x_6x.c:143:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:146:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/FinalProj.c:21:57: error: expected expression before '/' token
+ #define PCONP (*(volatile unsigned int *) 0x400FC0C4)  // Power Control for Peripherals register -- r allows turning off selected peripheral functions for the purpose of
+                                                         ^
+../src/FinalProj.c:81:2: note: in expansion of macro 'PCONP'
+  PCONP &=~(1<<12);
+  ^~~~~
+../src/cr_startup_lpc175x_6x.c:150:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:153:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/FinalProj.c:21:57: error: expected expression before '/' token
+ #define PCONP (*(volatile unsigned int *) 0x400FC0C4)  // Power Control for Peripherals register -- r allows turning off selected peripheral functions for the purpose of
+                                                         ^
+../src/FinalProj.c:87:2: note: in expansion of macro 'PCONP'
+  PCONP |= (1<<12);
+  ^~~~~
+../src/FinalProj.c:23:57: error: expected expression before '/' token
+ #define AD0CR (*(volatile unsigned int *) 0x40034000)  // A/D Control Register
+                                                         ^
+../src/FinalProj.c:88:2: note: in expansion of macro 'AD0CR'
+  AD0CR |= (1<<21);
+  ^~~~~
+../src/FinalProj.c:23:57: error: expected expression before '/' token
+ #define AD0CR (*(volatile unsigned int *) 0x40034000)  // A/D Control Register
+                                                         ^
+../src/FinalProj.c:90:2: note: in expansion of macro 'AD0CR'
+  AD0CR = (1 << 0) | (1 << 21);
+  ^~~~~
+../src/cr_startup_lpc175x_6x.c:157:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:162:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:226:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/FinalProj.c:30:60: error: expected expression before '/' token
+ #define PCLKSEL0 (*(volatile unsigned int *)  0x400FC1A8) // Peripheral Clock Selection register 0
+                                                            ^
+../src/FinalProj.c:95:2: note: in expansion of macro 'PCLKSEL0'
+  PCLKSEL0 |= (1<<25);
+  ^~~~~~~~
+../src/cr_startup_lpc175x_6x.c:231:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:249:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:255:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/FinalProj.c:30:60: error: expected expression before '/' token
+ #define PCLKSEL0 (*(volatile unsigned int *)  0x400FC1A8) // Peripheral Clock Selection register 0
+                                                            ^
+../src/FinalProj.c:96:2: note: in expansion of macro 'PCLKSEL0'
+  PCLKSEL0 &= ~(1<<24);
+  ^~~~~~~~
+../src/cr_startup_lpc175x_6x.c:261:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:265:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:320:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/FinalProj.c:20:59: error: expected expression before '/' token
+ #define PINSEL1 (*(volatile unsigned int *) 0x4002C004)  // Pin Function Select Register 1 --  controls the functions of the upper half of Port 0
+                                                           ^
+../src/FinalProj.c:105:2: note: in expansion of macro 'PINSEL1'
+  PINSEL1 |=(1<<14);
+  ^~~~~~~
+../src/cr_startup_lpc175x_6x.c:323:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:369:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/cr_startup_lpc175x_6x.c:374:2: warning: "/*" within comment [-Wcomment]
+ //*****************************************************************************
+   
+../src/FinalProj.c:20:59: error: expected expression before '/' token
+ #define PINSEL1 (*(volatile unsigned int *) 0x4002C004)  // Pin Function Select Register 1 --  controls the functions of the upper half of Port 0
+                                                           ^
+../src/FinalProj.c:106:2: note: in expansion of macro 'PINSEL1'
+  PINSEL1 &=~(1<<15);
+  ^~~~~~~
+../src/cr_startup_lpc175x_6x.c:1:2: error: unterminated comment
+ //*****************************************************************************
+  ^
+../src/FinalProj.c:28:60: error: expected expression before '/' token
+ #define PINMODE1  (*(volatile unsigned int *) 0x4002C044) // Pin Mode select register 0 -- controls pull-up/pull-down resistor configuration for Port 0 pins 0 to 15
+                                                            ^
+../src/FinalProj.c:107:2: note: in expansion of macro 'PINMODE1'
+  PINMODE1 &= ~(1<<15);
+  ^~~~~~~~
+../src/FinalProj.c:28:60: error: expected expression before '/' token
+ #define PINMODE1  (*(volatile unsigned int *) 0x4002C044) // Pin Mode select register 0 -- controls pull-up/pull-down resistor configuration for Port 0 pins 0 to 15
+                                                            ^
+../src/FinalProj.c:108:2: note: in expansion of macro 'PINMODE1'
+  PINMODE1 |= (1<<14);
+  ^~~~~~~~
+../src/FinalProj.c: At top level:
+../src/FinalProj.c:130:5: error: expected identifier or '(' before 'return'
+     return 0;
+     ^~~~~~
+../src/FinalProj.c:131:1: error: expected identifier or '(' before '}' token
+ }    // end of the main loop
+ ^
+../src/FinalProj.c: In function 'doorbellPressed':
+../src/FinalProj.c:43:51: error: expected expression before '/' token
+ #define FIO ((struct GPFOstruct *)0x2009c000)    // FIO for output
+                                                   ^
+../src/FinalProj.c:146:12: note: in expansion of macro 'FIO'
+  return (((FIO[2].FIOPIN >> 8) & 1) == 0);
+            ^~~
+make: *** [src/cr_startup_lpc175x_6x.o] Error 1
+../src/FinalProj.c: In function 'highFreq':
+../src/FinalProj.c:43:51: error: expected expression before '/' token
+ #define FIO ((struct GPFOstruct *)0x2009c000)    // FIO for output
+                                                   ^
+../src/FinalProj.c:154:30: note: in expansion of macro 'FIO'
+  while( (ampTemp2 > 0) && (((FIO[2].FIOPIN >> 8) & 1) == state) )
+                              ^~~
+../src/FinalProj.c:156:3: error: 'for' loop initial declarations are only allowed in C99 or C11 mode
+   for(int i = 0; i < 256; i++)
+   ^~~
+../src/FinalProj.c:19:56: error: expected expression before '/' token
+ #define DACR (*(volatile unsigned int *) 0x4008C000)  // D/A Converter Register -- This read/write register includes the digital value to be converted to analog
+                                                        ^
+../src/FinalProj.c:158:4: note: in expansion of macro 'DACR'
+    DACR = ((512 + ((wave[i]*ampTemp2) >> 9))) << 6;
+    ^~~~
+../src/FinalProj.c: In function 'lowFreq':
+../src/FinalProj.c:43:51: error: expected expression before '/' token
+ #define FIO ((struct GPFOstruct *)0x2009c000)    // FIO for output
+                                                   ^
+../src/FinalProj.c:173:30: note: in expansion of macro 'FIO'
+  while( (ampTemp2 > 0) && (((FIO[2].FIOPIN >> 8) & 1) == state) )
+                              ^~~
+../src/FinalProj.c:175:3: error: 'for' loop initial declarations are only allowed in C99 or C11 mode
+   for(int i = 0; i < 256; i++)
+   ^~~
+../src/FinalProj.c:19:56: error: expected expression before '/' token
+ #define DACR (*(volatile unsigned int *) 0x4008C000)  // D/A Converter Register -- This read/write register includes the digital value to be converted to analog
+                                                        ^
+../src/FinalProj.c:177:4: note: in expansion of macro 'DACR'
+    DACR = ((512 + ((wave[i]*ampTemp2) >> 9))) << 6;
+    ^~~~
+../src/FinalProj.c: In function 'doorbellPressed':
+../src/FinalProj.c:147:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/FinalProj.o] Error 1
+
+16:17:58 Build Finished (took 472ms)
+
